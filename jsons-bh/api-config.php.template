@@ -1,0 +1,16 @@
+<?php
+
+define('MAPAS_URL', "http://spcultura.prefeitura.sp.gov.br/");
+
+define('API_PUBLIC_KEY', 'Zgoa0Aew3vMiQIjVEvgnjwKqVL7MexZF');
+define('API_PRIVATE_KEY', 'I0Ww3Agbv4IDMHyfa0xilMLs17v$nfF6xKH8dSazx2GnA0p7zl2dIk1QRGRl');
+
+define('REPLACE_IMAGES_URL_FROM', 'http://spcultura.prefeitura.sp.gov.br/files/');
+define('REPLACE_IMAGES_URL_TO', 'http://spcultura.prefeitura.sp.gov.br/files/');
+
+define('PROJECT_ID', 1763);
+define('DATE_FROM', '2016-05-21');
+define('DATE_TO', '2016-05-22');
+
+define('SDK_DEBUG_REQUEST', true);
+define('SDK_DEBUG_RESPONSE', false);

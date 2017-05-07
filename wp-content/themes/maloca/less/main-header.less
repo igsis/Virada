@@ -1,0 +1,250 @@
+/* =Main header
+-------------------------------------------------------------- */
+#brand {
+  /*.box-shadow(6px 0 0 @brand-accent inset);*/
+  height: 130px;
+  margin: 0;
+  padding: 15px;
+  position: relative;
+  z-index: 20;
+  background-color: @brand-auxiliar;
+  background-image: url("img/bg-top.png");
+  background-size: 100%;
+  #logo-virada {
+    background-size: contain;
+    background-image: url(img/logo.png);
+    background-position: center;
+    height: 100px;
+    &:hover {
+      background-image: url(img/logo.png);
+    }
+  }
+}
+
+
+#main-header {
+  left: 0;
+  width: 225px;
+  /*.box-shadow(0 0 6px 0 @brand-primary);*/
+  .fixed-bars();
+  .transition(width linear .3s);
+  background-color: @brand-accent;
+
+  .mapa i.icon_map {
+      font-size: 15px; margin-left: -38px; margin-right: 23px;
+  }
+
+  &.minified {
+      .mapa i.icon_map {
+            margin-left: -28px;
+        }
+
+    width: 115px;
+    #brand {
+      #logo-virada {
+        background-size: 100%;
+        background-position-y: 20px;
+      }
+    }
+    #main-menu>li>a {
+      background-position: center;
+      height: 48px;
+    }
+    #main-menu>li>a>span {
+      .text-hide();
+    }
+    #main-menu>li.has-children:hover {
+      /*.box-shadow(6px 0 0 @brand-accent inset);*/
+      ul.children {
+        left: 137px;
+        visibility: visible;
+      }
+    }
+    #brand {
+        height: 115px;
+    }
+    .assinatura {
+      display: none;
+    }
+  }
+}
+
+#main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    /*.box-shadow(6px 0 0 @brand-primary inset);*/
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &:hover {
+      /*.box-shadow(6px 0 0 @brand-primary inset);*/
+    }
+    a {
+      color: @brand-auxiliar;
+      background-position: 30px center;
+      background-repeat: no-repeat;
+      /*.box-shadow(-6px 0 0 @brand-primary);*/
+      display: block;
+      height: 40px;
+      letter-spacing: 0.03em;
+      padding: 0 0 0 75px;
+      position: relative;
+      white-space: nowrap;
+      z-index: 30;
+      .headings-font();
+      &:hover {
+        color: @brand-auxiliar;
+        background-color: @main-header-hover;
+        border-color: @brand-primary;
+        /*.box-shadow(-6px 0 0 @brand-accent);*/
+      }
+    }
+    ul.children {
+      background-color: @brand-primary;
+      bottom: 0;
+      left: -10%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      width: 237px;
+      z-index: 1;
+      .transition(left linear .3s);
+      li {
+        box-shadow: none;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        a {
+          background-color: transparent;
+          border: none;
+          .box-shadow(none);
+          color: #E7E8E9;
+        }
+      }
+    }
+    &.has-children:hover {
+      /*.box-shadow(6px 0 0 @brand-accent inset);*/
+      ul.children {
+        left: 237px;
+        visibility: visible;
+      }
+    }
+    &.whitespace {
+      /*.box-shadow(6px 0 0 @brand-accent inset);*/
+      overflow: hidden;
+      position: relative;
+      height: 3000px;
+      background-color: @brand-auxiliar;
+      background-image: url("img/bg-bottom.png");
+      background-size: 100% 100%; 
+      span {
+        display: block;
+        height: 3000px;
+        position: relative;
+        width: 100%;
+        z-index: 15;
+      }
+      &:hover {
+        /*.box-shadow(6px 0 0 @brand-accent inset);*/
+      }
+    }
+  }
+
+  .a-virada {
+    background-image: url("img/virada-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/virada-icon-active.svg");
+    }
+  }
+  .programacao {
+    background-image: url("img/programacao-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/programacao-icon-active.svg");
+    }
+  }
+  .noticias {
+    background-image: url("img/noticias-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/noticias-icon-active.svg");
+    }
+  }
+  .gallery {
+    background-image: url("img/gallery-icon.svg");
+    background-size: 18px 18px;
+    &:hover {
+      background-image: url("img/gallery-icon-active.svg");
+    }
+  }
+  .blog {
+    background-image: url("img/blog-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/blog-icon-active.svg");
+    }
+  }
+  .imprensa {
+    background-image: url("img/imprensa-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/imprensa-icon-active.svg");
+    }
+  }
+  .nas-redes {
+    background-image: url("img/nas-redes-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/nas-redes-icon-active.svg");
+    }
+  }
+  .anos-10 {
+    background-image: url("img/10-anos-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/10-anos-icon-active.svg");
+    }
+  }
+  .minha-virada {
+    background-image: url("img/minha-virada-icon.svg");
+    background-size: 20px 20px;
+    &:hover {
+      background-image: url("img/minha-virada-icon-active.svg");
+    }
+  }
+}
+
+.logo {
+  background-repeat: no-repeat;
+  margin: 0 0 0 4px;
+  padding: 0;
+  z-index: 30;
+  // .text-hide();
+  a {
+    display: block;
+    height: inherit;
+  }
+}
+
+#logo-smc {
+    bottom: 15px;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    img {
+      display: block;
+      margin: 0 auto;
+      @media screen and (max-height: 650px) {
+        height: 165px;
+      }
+    }
+}
